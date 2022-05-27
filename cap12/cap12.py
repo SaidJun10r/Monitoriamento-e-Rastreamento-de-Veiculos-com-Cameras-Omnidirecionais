@@ -2,7 +2,6 @@
 
 # Importando bibliotecas
 import cv2 as cv
-import numpy as np
 from matplotlib import pyplot as plt
 
 img = cv.imread("cap12/teste.jpg") # Importando a imagem no código
