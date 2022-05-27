@@ -13,9 +13,25 @@ for i, j in enumerate(color):
     histr = cv.calcHist([img], [i], None, [256], [0,256])
     plt.plot(histr, color = j)
     plt.xlim([0,256])
-plt.show()
 
-# Mostrando imagem no openCV
+# Conversão para grayscale
+gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+cv.imshow("gray", gray)
+
+# Conversão para HSV
+hsv = cv.cvtColor(img, cv.COLOR_BGR2HSV)
+cv.imshow("hsv", hsv)
+
+# Conversão para YUV
+yuv = cv.cvtColor(img, cv.COLOR_BGR2YUV)
+cv.imshow("yuv", yuv)
+
+#Conversão para YCRCB
+ycbcr = cv.cvtColor(img, cv.COLOR_BGR2YCrCb)
+cv.imshow("ycbcr", ycbcr)
+
+# Mostrando imagem no openCV / Matplotlib
 cv.imshow("imagem", img)
 cv.waitKey(0)
 cv.destroyAllWindows()
+plt.show()
